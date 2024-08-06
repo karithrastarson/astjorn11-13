@@ -5,12 +5,12 @@ $(document).ready(function () {
     var found = false;
     for (var i = 0, len = data.length; i < len; i++) {
         var value = data[i];
-        if(value.id === aptId) {
+        if(value.id === value.husnr+'-'+aptId) {
             /* Data point found */
             found = true;
             var seld = (String(value.seld).toLowerCase() === "já");
             $("#apt-info-floor-plan").attr('src', 'media/floor-plans/' + aptId+'.png');
-            $("#apt-name").text("Íbúð " + value.id + (seld ? " (SELD)":(value.ferli != null ? " (í söluferli)" : "")));
+            $("#apt-name").text("Íbúð " + value.ibudnr + (seld ? " (SELD)":(value.ferli != null ? " (í söluferli)" : "")));
             
             $("#apt-floor").text(value.haed);
             $("#apt-size").text(value.birtflatarmal);
@@ -29,6 +29,7 @@ $(document).ready(function () {
         }
     }
     if(found === false) {
+        console.log("Here");
         // $(".wrapper-item").hide();
         // $("#notfound").show();
     }
