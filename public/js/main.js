@@ -105,7 +105,7 @@ function populateGallery() {
       var value = data[i];
       var seld = (String(value.seld).toLowerCase() === "já");
       var ferli =  !(String(value.stada).toLowerCase() === "laus");
-      var verd = (ferli) ?  "Í söluferli" : value.verd + "m kr.";
+      var verd = (ferli) ?  "Í söluferli" : value.verd;
       if (seld) {
         verd = "SELD";
       }
