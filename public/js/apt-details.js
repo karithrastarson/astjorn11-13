@@ -29,7 +29,6 @@ $(document).ready(function () {
         }
     }
     if(found === false) {
-        console.log("Here");
         // $(".wrapper-item").hide();
         // $("#notfound").show();
     }

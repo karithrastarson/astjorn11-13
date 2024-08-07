@@ -127,7 +127,6 @@ function populateGallery() {
 
       $('.apt-details').removeClass('selected');
       card.toggleClass('selected');
-      console.log("scroll to " + ibudNr + " at " + scrollPosition);
       $('.apt-scroller').animate({scrollLeft: scrollPosition}, 'slow');
   });
   
@@ -135,7 +134,6 @@ function populateGallery() {
       $('.apt-details').removeClass('selected');
       $(this).toggleClass('selected');
       var ibudNr = $(this).attr('id').split('-')[1];
-      console.log("clicked on " + ibudNr);
       $('area').mouseout();
       $('[title='+ibudNr+']').mouseover();
     });
@@ -174,7 +172,6 @@ function burgerCLick(x) {
 function toggleFullscreen(x) {
     //If x has src attribute, set the src of the fullscreenview to x.src
     if (x.hasAttribute('src')) {
-        console.log(x.src);
         $('.fullscreenview').css('background-image',  "url(" + x.src + ")");
         $('.fullscreenview').css("display", "flex").hide().fadeIn(200);
     }

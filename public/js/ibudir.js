@@ -9,10 +9,7 @@ $(document).ready(function () {
     $(document).on('click', '.apt-row', function () {
         // Get the modal
         $(this).toggleClass('selected');
-        console.log("clicked on " + $(this).find('td:first').text());
-      
         var aptNr = $(this).find('td:first').text();
-        console.log("apt nr: " + aptNr);
         var imgLink = "media/floor-plans/" + aptNr + ".png";
         var detailsLink = "/ibud.html?ibud=" + aptNr;
         modal.style.display = "block";
@@ -39,7 +36,6 @@ window.onclick = function(event) {
             updateTable(hidesold=true);
         }
         else {
-          console.log("unchecked");
           updateTable(hidesold=false);
 
         }
