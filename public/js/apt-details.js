@@ -17,12 +17,8 @@ $(document).ready(function () {
             $("#apt-rooms").text(value.herbergi);
             $("#apt-bedrooms").text(value.svefnherbergi);
             $("#apt-storage").text(value.geymsla);
-            $("#apt-parking").text(value.bilastaedi);
-            if(!value.golfbilastaedi) {
-                $("table.apt-info-table tr:contains('Golfbílastæði')").remove();
-            }
             $('#contact-info').click(function(){
-              location.href = "mailto:fyrirspurnir@vesturvik.is?subject=Fyrirspurn um íbúð " + value.id;
+              location.href = "mailto:fyrirspurnir@astjorn.web.app?subject=Fyrirspurn um íbúð " + value.id;
             });
             $("#apt-price").text(seld ? "Seld" : (value.ferli != null ? "Í söluferli" : value.verd));
             break;

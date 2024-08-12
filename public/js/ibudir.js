@@ -120,7 +120,6 @@ function updateTable(hidesold=false, sortBy="default") {
           <td data-th="Íbúð">${value.ibudnr}</td>
           <td data-th="Hæð">${value.haed}</td>
           <td data-th="Herbergi">${value.herbergi}</td>
-          <td data-th="Bílastæði í kjallara">${value.bilastaedi}</td>
           <td data-th="Birtir fermetrar">${value.birtflatarmal}</td>
           <td data-th="Verð">${seld ? "Seld" : (value.ferli != null ? "Í ferli" : value.verd)}</td>
       </tr>`
