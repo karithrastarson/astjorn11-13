@@ -128,6 +128,10 @@ function populateGallery() {
       $('.apt-details').removeClass('selected');
       card.toggleClass('selected');
       $('.apt-scroller').animate({scrollLeft: scrollPosition}, 'slow');
+          // Scroll down to the .apt-scroller element
+          $('html, body').animate({
+            scrollTop: $('.apt-scroller').offset().top
+          }, 'slow');
   });
   
     $('.apt-details').click(function(e) {
@@ -136,6 +140,10 @@ function populateGallery() {
       var ibudNr = $(this).attr('id').split('-')[1];
       $('area').mouseout();
       $('[title='+ibudNr+']').mouseover();
+          // Scroll down to the .apt-scroller element
+          $('html, body').animate({
+            scrollTop: $('#building-map').offset().top
+          }, 'slow');
     });
     
     });
