@@ -142,7 +142,7 @@ function populateGallery() {
       $('[title='+ibudNr+']').mouseover();
           // Scroll down to the .apt-scroller element
           $('html, body').animate({
-            scrollTop: $('#building-map').offset().top
+            scrollTop: 0
           }, 'slow');
     });
     
